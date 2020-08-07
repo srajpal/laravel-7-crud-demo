@@ -8,7 +8,7 @@ The project allows you to create/show/update/delete companies. It also allows yo
 The company is owned by the logged in user and the employees belong to the company they are created in. If a User is deleted all its Companies and relevant Employees will be deleted.
 
 
-- Uses [Routing](https://laravel.com/docs/7.x/routing) (resources) to direct traffic to appropriate pages (views)
+- Uses [Routing](https://laravel.com/docs/7.x/routing) to direct traffic to appropriate pages.
 - Uses [Middleware](https://laravel.com/docs/7.x/middleware) to secure access to routes.
 - Uses [Authentication](https://laravel.com/docs/7.x/authentication) to securely login as a registered user.
 - Uses [CSRF](https://laravel.com/docs/7.x/csrf) Protection for forms.
