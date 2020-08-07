@@ -8,7 +8,7 @@ return [
     'login' => 'Login',
     'register' => 'Register',
     'created-by' => 'Created by',
-    'go-t-home' => 'Go to Home',
+    'go-to-home' => 'Go to Home',
     'login-to-begin' => 'Login to Begin',
     'view-readme' => 'View Readme',
     'switch-lang' => 'cambio al español',

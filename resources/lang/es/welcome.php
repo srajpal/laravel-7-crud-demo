@@ -8,7 +8,7 @@ return [
     'login' => 'Iniciar sesión',
     'register' => 'Registro',
     'created-by' => 'Creado por',
-    'go-t-home' => 'Ir a casa',
+    'go-to-home' => 'Ir a casa',
     'login-to-begin' => 'Iniciar sesión para comenzar',
     'view-readme' => 'Leer Readme',
     'switch-lang' => 'switch to english',

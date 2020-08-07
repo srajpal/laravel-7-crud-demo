@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9f6f6a5e-8f27-49ef-80a1-08edde331586" name="srajpal.com">
+        <fileTransfer rootFolder="/var/www/html" accessType="SFTP" host="ec2-52-23-207-63.compute-1.amazonaws.com" port="22" sshConfigId="edb67d40-5b30-4b2c-a0cf-7b12f19f3e6e" sshConfig="centos@ec2-52-23-207-63.compute-1.amazonaws.com:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

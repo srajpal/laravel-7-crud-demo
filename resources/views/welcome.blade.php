@@ -96,7 +96,7 @@
         <a href="{{ route('login') }}">{{ __('welcome.login-to-begin') }}</a>
     @endauth
 
-        <br><br><a href="{{ route('readme') }}">{{ __('welcome.view-readme') }}</a>
+        <br><br><a href="https://github.com/srajpal/laravel-7-crud-demo/blob/master/README.md" target="_blank">{{ __('welcome.view-readme') }}</a>
 
         <p>
             <br><br><a href="{{ route('welcome',$lang=='en'?'es':'en') }}">{{ __('welcome.switch-lang') }}</a>

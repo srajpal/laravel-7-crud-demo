@@ -29,7 +29,11 @@ The company is owned by the logged in user and the employees belong to the compa
 
 - Laravel 7.x
 - PHP 7.2+
+- MariaDB 10+
 
+## View Demo
+
+http://projects.srajpal.com/laravel/laravel-7-crud-demo/
 
 ## Other Features
 

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig host="ec2-52-23-207-63.compute-1.amazonaws.com" id="edb67d40-5b30-4b2c-a0cf-7b12f19f3e6e" keyPath="$PROJECT_DIR$/../../../SunnyRajpal.com/Docs/Mac/srajpal.pem" port="22" nameFormat="DESCRIPTIVE" username="centos" />
+    </configs>
+  </component>
+</project>
