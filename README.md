@@ -35,6 +35,11 @@ The company is owned by the logged in user and the employees belong to the compa
 
 http://projects.srajpal.com/laravel-7-crud-demo/
 
+email: admin@admin.com<br>
+password: password<br>
+email: admin2@admin.com<br>
+password: password<br>
+
 ## Other Features
 
 - Uses [DataTables](https://www.datatables.net/) to show/paginate data.
@@ -58,6 +63,7 @@ http://projects.srajpal.com/laravel-7-crud-demo/
 - run "php artisan serve"
 
 The project creates two default users with the following credentials:<br>
+
 email: admin@admin.com<br>
 password: password<br>
 email: admin2@admin.com<br>
