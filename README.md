@@ -33,7 +33,7 @@ The company is owned by the logged in user and the employees belong to the compa
 
 ## View Demo
 
-http://projects.srajpal.com/laravel/laravel-7-crud-demo/
+http://projects.srajpal.com/laravel-7-crud-demo/
 
 ## Other Features
 
