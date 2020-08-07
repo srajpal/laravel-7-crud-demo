@@ -40,6 +40,16 @@ class Company extends Model
     }
 
     /**
+     * get the asset path, fixed issue with finding images
+     * without the 'storage/'. it can fail in production
+     * @return string
+     */
+    static function getAssetPath()
+    {
+        return asset('storage').'/';
+    }
+
+    /**
      * Accessor to give default image if no logo provided
      * and fix path
      *
@@ -50,7 +60,7 @@ class Company extends Model
         if ($value == null) {
             return asset(self::DEFAULT_LOGO);
         }
-        // without the 'storage/'. it can fail in production
-        return asset('storage/'.$value);
+
+        return $this->getAssetPath().$value;
     }
 }

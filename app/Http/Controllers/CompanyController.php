@@ -162,10 +162,11 @@ class CompanyController extends Controller
         if (!stristr($company->logo,Company::DEFAULT_LOGO)) {
             // if a logo was provided for this company remove it first
             $file = $company->logo;
-            if (stristr($file,asset(''))) {
+            $asset_path = Company::getAssetPath();
+            if (stristr($file,$asset_path)) {
                 // if we are using an accessor to make the path into an asset url
                 // remove the asset path from the file path
-                $file = str_replace(asset(''),'',$file);
+                $file = str_replace($asset_path,'',$file);
             }
             Storage::delete($file);
         }
