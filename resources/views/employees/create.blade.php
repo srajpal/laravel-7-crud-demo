@@ -3,12 +3,12 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
                         {{ __('Create new Employee') }}
                         <div class="float-right">
-                            <a href="{{ URL::previous() }}" class="btn btn-secondary btn-sm">Back</a>
+                            <a href="{{ URL::previous() }}" class="btn btn-secondary btn-sm">{{ __('Back') }}</a>
                         </div>
                     </div>
 

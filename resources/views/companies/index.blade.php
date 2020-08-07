@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">{{ __('Companies') }}</div>
 
@@ -23,30 +23,21 @@
                         <table id="tblCompanies" class="display" style="width:100%">
                             <thead>
                             <tr>
-                                <th>id</th>
-                                <th>name</th>
-                                <th>email</th>
-                                <th>logo</th>
-                                <th>website</th>
-                                <th>employees</th>
-                                <th>options</th>
+                                <th>{{ __('id') }}</th>
+                                <th>{{ __('name') }}</th>
+                                <th>{{ __('email') }}</th>
+                                <th>{{ __('logo') }}</th>
+                                <th>{{ __('website') }}</th>
+                                <th>{{ __('employees') }}</th>
+                                <th>{{ __('options') }}</th>
                             </tr>
                             </thead>
                             <tbody>
                             @foreach ($companies as $company)
                             <tr>
-                                <td>{{$company->id}}</td>
-                                <td>{{$company->name}}</td>
-                                <td>
-                                    @if ($company->email)
-                                        <a
-                                            href=""
-                                            class="btn btn-secondary btn-sm"
-                                            data-toggle="tooltip"
-                                            title="{{ $company->email }}"
-                                        >Send Email</a>
-                                    @endif
-                                </td>
+                                <td>{{ $company->id }}</td>
+                                <td>{{ $company->name }}</td>
+                                <td>{{ $company->email }}</td>
                                 <td>
                                     <a
                                         href="{{ $company->logo }}"
@@ -54,16 +45,7 @@
                                         data-title="Logo"
                                     ><img src="{{ $company->logo }}" alt="" height="32" width="32"></a>
                                 </td>
-                                <td>
-                                    @if ($company->website)
-                                        <a
-                                            href="{{ $company->website }}"
-                                            data-toggle="tooltip"
-                                            title="{{ $company->website }}"
-                                            class="btn btn-secondary btn-sm"
-                                        >Visit Site</a>
-                                    @endif
-                                </td>
+                                <td>{{ $company->website }}</td>
                                 <td class="text-center">
                                     <a href="{{ route('employees.index', $company->id) }}" class="btn btn-info btn-sm">
                                         <span class="fa fa-users"></span> {{ $company->employees_count }}
@@ -87,13 +69,13 @@
                             </tbody>
                             <tfoot>
                             <tr>
-                                <th>id</th>
-                                <th>name</th>
-                                <th>email</th>
-                                <th>logo</th>
-                                <th>website</th>
-                                <th>employees</th>
-                                <th>options</th>
+                                <th>{{ __('id') }}</th>
+                                <th>{{ __('name') }}</th>
+                                <th>{{ __('email') }}</th>
+                                <th>{{ __('logo') }}</th>
+                                <th>{{ __('website') }}</th>
+                                <th>{{ __('employees') }}</th>
+                                <th>{{ __('options') }}</th>
                             </tr>
                             </tfoot>
                         </table>
@@ -119,7 +101,7 @@
         $(document).on('click','[id^=btnDelete]',function(){
             let companyid = $(this).attr('companyid');
             let route = $(this).attr('route');
-            let conf = confirm('Do you want to delete company, '+companyid+'?');
+            let conf = confirm('{{ __('Do you want to delete company') }}, '+companyid+'?');
 
             if (conf) {
                 $.ajax({

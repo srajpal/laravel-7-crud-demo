@@ -3,12 +3,12 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
                         {{ __('Employees for ').$company->name }}
                         <div class="float-right">
-                            <a href="{{ URL::previous() }}" class="btn btn-secondary btn-sm">Back</a>
+                            <a href="{{ route('companies.index') }}" class="btn btn-secondary btn-sm">{{ __('Back to Companies') }}</a>
                         </div>
                     </div>
 
@@ -28,12 +28,12 @@
                         <table id="tblEmployees" class="display" style="width:100%">
                             <thead>
                             <tr>
-                                <th>id</th>
-                                <th>first name</th>
-                                <th>last name</th>
-                                <th>email</th>
-                                <th>phone</th>
-                                <th>options</th>
+                                <th>{{ __('id') }}</th>
+                                <th>{{ __('first name') }}</th>
+                                <th>{{ __('last name') }}</th>
+                                <th>{{ __('email') }}</th>
+                                <th>{{ __('phone') }}</th>
+                                <th>{{ __('options') }}</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -42,27 +42,9 @@
                                 <td>{{$employee->id}}</td>
                                 <td>{{$employee->first_name}}</td>
                                 <td>{{$employee->last_name}}</td>
-                                <td>
-                                    @if ($employee->email)
-                                        <a
-                                            href=""
-                                            class="btn btn-secondary btn-sm"
-                                            data-toggle="tooltip"
-                                            title="{{ $employee->email }}"
-                                        >Send Email</a>
-                                    @endif
-                                </td>
-                                <td>
-                                    @if ($employee->phone)
-                                        <a
-                                            href=""
-                                            class="btn btn-secondary btn-sm"
-                                            data-toggle="tooltip"
-                                            title="{{ $employee->phone }}"
-                                        >Send SMS</a>
-                                    @endif
-                                </td>
-                                <td class="text-center">
+                                <td>{{ $employee->email }}</td>
+                                <td>{{ $employee->phone }}</td>
+                                <td class="text-center text-nowrap">
                                     <a
                                         href="{{ route('employees.edit', [$company->id, $employee->id]) }}"
                                         class="btn btn-secondary btn-sm"
@@ -80,12 +62,12 @@
                             </tbody>
                             <tfoot>
                             <tr>
-                                <th>id</th>
-                                <th>first name</th>
-                                <th>last name</th>
-                                <th>email</th>
-                                <th>phone</th>
-                                <th>options</th>
+                                <th>{{ __('id') }}</th>
+                                <th>{{ __('first name') }}</th>
+                                <th>{{ __('last name') }}</th>
+                                <th>{{ __('email') }}</th>
+                                <th>{{ __('phone') }}</th>
+                                <th>{{ __('options') }}</th>
                             </tr>
                             </tfoot>
                         </table>
@@ -111,7 +93,7 @@
         $(document).on('click','[id^=btnDelete]',function(){
             let employeeid = $(this).attr('employeeid');
             let route = $(this).attr('route');
-            let conf = confirm('Do you want to delete employee, '+employeeid+'?');
+            let conf = confirm('{{ __('Do you want to delete employee') }}, '+employeeid+'?');
 
             if (conf) {
                 $.ajax({

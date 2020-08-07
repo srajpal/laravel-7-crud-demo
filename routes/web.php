@@ -25,10 +25,6 @@ Route::get('/', function () {
     return redirect(route('welcome','en'));
 });
 
-Route::get('/readme', function () {
-    return view('readme');
-})->name('readme');
-
 // remove register option and password reset options and their routes
 Auth::routes(['register' => false, 'reset' => false]);
 

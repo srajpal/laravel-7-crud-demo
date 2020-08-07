@@ -54,6 +54,7 @@ http://projects.srajpal.com/laravel/laravel-7-crud-demo/
 - run "npm install && npm run dev"
 - run "php artisan migrate"
 - run "php artisan db:seed"
+- run "php artisan storage:link"
 - run "php artisan serve"
 
 The project creates two default users with the following credentials:<br>
