@@ -50,6 +50,7 @@ class Company extends Model
         if ($value == null) {
             return asset(self::DEFAULT_LOGO);
         }
-        return asset($value);
+        // without the 'storage/'. it can fail in production
+        return asset('storage/'.$value);
     }
 }
